@@ -1,0 +1,29 @@
+package ariza;
+import DLinkedList.*;
+
+public class ariza<T> {
+    private final DLinkedList<T> list = new DLinkedList<T>();
+    private int size = 0;
+
+    public void apariza(T value){
+        list.append(value);
+        size++;
+    }
+
+    public void reariza(){
+        list.removeNode(0);
+        size--;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public T peek() {
+        return list.getNodeIndex(0).data;
+    }
+
+    public void printAll() {
+        list.printAll();
+    }
+}
